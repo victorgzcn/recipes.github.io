@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stir-Fried Beef with Rice Noodles - Victor Ye Recipes</title>
+    <meta name="description" content="Stir-Fried Beef with Rice Noodles - Gan Chao Niu He‌ is a classic Cantonese dish made with flat rice noodles (Ho Fun) stir-fried with tender beef, bean sprouts, and garlic chives. It's k...">
+    <meta name="keywords" content="quick, recipe, cooking, Cantonese">
+    <meta name="author" content="Victor Ye">
+    <meta property="og:title" content="Stir-Fried Beef with Rice Noodles">
+    <meta property="og:description" content="Stir-Fried Beef with Rice Noodles - Gan Chao Niu He‌ is a classic Cantonese dish made with flat rice noodles (Ho Fun) stir-fried with tender beef, bean sprouts, and garlic chives. It's k...">
+    <meta property="og:image" content="https://b0.bdstatic.com/ugc/n3pOEVykI4GJYaaTMa11bwcf979440f52ed489f926a1cab5787426.jpg">
+    
+    <style>
+        :root {
+            --primary-color: #2a5c82;
+            --secondary-color: #666666;
+            --accent-color: #f0f7ff;
+            --bg-color: #f9f9f9;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.7;
+            color: #333;
+            background: linear-gradient(135deg, var(--bg-color) 0%, #ffffff 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .recipe-card {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            overflow: hidden;
+            margin: 20px 0;
+        }
+        
+        .recipe-header {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #3a7cb4 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+        
+        .recipe-title {
+            font-size: 2.5em;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+        
+        .recipe-meta {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+        
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 1.1em;
+        }
+        
+        .recipe-tags {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-top: 15px;
+        }
+        
+        .tag {
+            background: rgba(255,255,255,0.2);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+        }
+        
+        .recipe-image {
+            width: 100%;
+            max-height: 500px;
+            object-fit: cover;
+            border-bottom: 3px solid var(--primary-color);
+        }
+        
+        .recipe-content {
+            padding: 40px;
+        }
+        
+        .description {
+            font-style: italic;
+            color: var(--secondary-color);
+            font-size: 1.1em;
+            margin-bottom: 30px;
+            line-height: 1.8;
+            background: var(--accent-color);
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 4px solid var(--primary-color);
+        }
+        
+        .section {
+            margin-bottom: 40px;
+        }
+        
+        .section-title {
+            color: var(--primary-color);
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--accent-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .ingredients-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .ingredient-item {
+            background: var(--accent-color);
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 3px solid var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .ingredient-item:before {
+            content: "•";
+            color: var(--primary-color);
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+        
+        .instructions-list {
+            list-style: none;
+            counter-reset: instruction-counter;
+        }
+        
+        .instruction-item {
+            margin-bottom: 25px;
+            padding: 20px;
+            background: var(--accent-color);
+            border-radius: 10px;
+            border-left: 4px solid var(--primary-color);
+            position: relative;
+        }
+        
+        .instruction-item:before {
+            content: counter(instruction-counter);
+            counter-increment: instruction-counter;
+            background: var(--primary-color);
+            color: white;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            position: absolute;
+            left: -17px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        
+        .notes {
+            background: linear-gradient(135deg, var(--accent-color) 0%, #e3f2fd 100%);
+            padding: 25px;
+            border-radius: 10px;
+            border-left: 4px solid var(--primary-color);
+            margin-top: 30px;
+        }
+        
+        .notes h3 {
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding: 20px;
+            color: var(--secondary-color);
+            border-top: 1px solid #eee;
+        }
+        
+        .print-btn {
+            background: var(--primary-color);
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 1em;
+            margin: 20px 0;
+            transition: background 0.3s ease;
+        }
+        
+        .print-btn:hover {
+            background: #1c4a6e;
+        }
+        
+        @media (max-width: 768px) {
+            .recipe-title { font-size: 2em; }
+            .recipe-meta { gap: 15px; }
+            .recipe-content { padding: 20px; }
+            .ingredients-grid { grid-template-columns: 1fr; }
+        }
+        
+        @media print {
+            .print-btn { display: none; }
+            body { background: white; }
+            .recipe-card { box-shadow: none; border: 1px solid #ccc; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="recipe-card">
+            <div class="recipe-header">
+                <h1 class="recipe-title">Stir-Fried Beef with Rice Noodles</h1>
+                
+                <div class="recipe-meta">
+                    <span class="meta-item">⏱️ Prep: 30</span>
+                    <span class="meta-item">🔥 Cook: 10</span>
+                    <span class="meta-item">👥 Servings: 4</span>
+                    <span class="meta-item">⚡ Easy</span>
+                    <span class="meta-item">🍝 Cantonese</span>
+                </div>
+                
+                <div class="recipe-tags"><span class="tag">quick</span></div>
+            </div>
+            
+            <img src="https://b0.bdstatic.com/ugc/n3pOEVykI4GJYaaTMa11bwcf979440f52ed489f926a1cab5787426.jpg" alt="Stir-Fried Beef with Rice Noodles" class="recipe-image" loading="lazy">
+            
+            <div class="recipe-content">
+                <div class="description">Gan Chao Niu He‌ is a classic Cantonese dish made with flat rice noodles (Ho Fun) stir-fried with tender beef, bean sprouts, and garlic chives. It's known for its smoky wok hei (breath of the wok) and slightly charred, dry texture.</div>
+                
+                <div class="section">
+                    <h2 class="section-title">📋 Ingredients</h2>
+                    <div class="ingredients-grid">
+                        <div class="ingredient-item">200g flat rice noodles (Ho Fun)</div><div class="ingredient-item">100g beef (flank or sirloin, thinly sliced)</div><div class="ingredient-item">50g garlic chives (or Chinese chives)</div><div class="ingredient-item">50g bean sprouts (trimmed)</div><div class="ingredient-item">2 tbsp soy sauce (light)</div><div class="ingredient-item">1 tbsp dark soy sauce</div><div class="ingredient-item">1 tbsp oyster sauce</div><div class="ingredient-item">½ tsp sugar</div><div class="ingredient-item">½ tsp white pepper</div><div class="ingredient-item">1 tbsp cornstarch (for marinating beef)</div><div class="ingredient-item">1 tsp Shaoxing wine (or dry sherry)</div><div class="ingredient-item">2 tbsp vegetable oil (divided</div>
+                    </div>
+                </div>
+                
+                <div class="section">
+                    <h2 class="section-title">👩‍🍳 Instructions</h2>
+                    <ol class="instructions-list">
+                        <li class="instruction-item">Soak rice noodles in warm water for 5-6 minutes until pliable, then drain.</li><li class="instruction-item">Marinate beef with 1 tbsp soy sauce, Shaoxing wine, cornstarch, and 1 tbsp oil for 15 minutes.</li><li class="instruction-item">Heat 1 tbsp oil in a wok over high heat.</li><li class="instruction-item">Quickly stir-fry beef until 70% cooked (about 1 minute), then remove and set aside.</li><li class="instruction-item">Add remaining oil, then toss in garlic chives and bean sprouts for 30 seconds.</li><li class="instruction-item">Add noodles, dark soy sauce, oyster sauce, and sugar. Stir-fry evenly.</li><li class="instruction-item">Return beef to the wok, toss well, and cook for another minute.</li>
+                    </ol>
+                </div>
+                
+                <div class="notes">
+                    <h3>💡 Chef's Notes</h3>
+                    <p>High Heat‌: Essential for achieving wok hei (smoky flavor).<br>Prevent Sticking‌: Use a well-seasoned wok or non-stick pan.<br>Texture‌: Noodles should be slightly charred but not mushy.</p>
+                </div>
+                
+                <button class="print-btn" onclick="window.print()">🖨️ Print Recipe</button>
+            </div>
+            
+            <div class="footer">
+                <p>Recipe created by Victor Ye on September 11, 2025</p>
+                <p>Generated with ❤️ using Recipe Blog Generator</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
