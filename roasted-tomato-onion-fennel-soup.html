@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roasted Tomato, Onion, And Fennel Soup - Victor Ye Recipes</title>
+    <meta name="description" content="Roasted Tomato, Onion, And Fennel Soup - Roasting the vegetables for this soup brings out their natural sweetness....">
+    <meta name="keywords" content="quick, recipe, cooking, Italian">
+    <meta name="author" content="Victor Ye">
+    <meta property="og:title" content="Roasted Tomato, Onion, And Fennel Soup">
+    <meta property="og:description" content="Roasted Tomato, Onion, And Fennel Soup - Roasting the vegetables for this soup brings out their natural sweetness....">
+    <meta property="og:image" content="https://italianfoodforever.com/wp-content/uploads/2010/08/roastedtomsoup132.jpg">
+    
+    <style>
+        :root {
+            --primary-color: #2a5c82;
+            --secondary-color: #666666;
+            --accent-color: #f0f7ff;
+            --bg-color: #f9f9f9;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.7;
+            color: #333;
+            background: linear-gradient(135deg, var(--bg-color) 0%, #ffffff 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .recipe-card {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            overflow: hidden;
+            margin: 20px 0;
+        }
+        
+        .recipe-header {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #3a7cb4 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+        
+        .recipe-title {
+            font-size: 2.5em;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+        
+        .recipe-meta {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+        
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 1.1em;
+        }
+        
+        .recipe-tags {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-top: 15px;
+        }
+        
+        .tag {
+            background: rgba(255,255,255,0.2);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+        }
+        
+        .recipe-image {
+            width: 100%;
+            max-height: 500px;
+            object-fit: cover;
+            border-bottom: 3px solid var(--primary-color);
+        }
+        
+        .recipe-content {
+            padding: 40px;
+        }
+        
+        .description {
+            font-style: italic;
+            color: var(--secondary-color);
+            font-size: 1.1em;
+            margin-bottom: 30px;
+            line-height: 1.8;
+            background: var(--accent-color);
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 4px solid var(--primary-color);
+        }
+        
+        .section {
+            margin-bottom: 40px;
+        }
+        
+        .section-title {
+            color: var(--primary-color);
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--accent-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .ingredients-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .ingredient-item {
+            background: var(--accent-color);
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 3px solid var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .ingredient-item:before {
+            content: "•";
+            color: var(--primary-color);
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+        
+        .instructions-list {
+            list-style: none;
+            counter-reset: instruction-counter;
+        }
+        
+        .instruction-item {
+            margin-bottom: 25px;
+            padding: 20px;
+            background: var(--accent-color);
+            border-radius: 10px;
+            border-left: 4px solid var(--primary-color);
+            position: relative;
+        }
+        
+        .instruction-item:before {
+            content: counter(instruction-counter);
+            counter-increment: instruction-counter;
+            background: var(--primary-color);
+            color: white;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            position: absolute;
+            left: -17px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        
+        .notes {
+            background: linear-gradient(135deg, var(--accent-color) 0%, #e3f2fd 100%);
+            padding: 25px;
+            border-radius: 10px;
+            border-left: 4px solid var(--primary-color);
+            margin-top: 30px;
+        }
+        
+        .notes h3 {
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding: 20px;
+            color: var(--secondary-color);
+            border-top: 1px solid #eee;
+        }
+        
+        .print-btn {
+            background: var(--primary-color);
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 1em;
+            margin: 20px 0;
+            transition: background 0.3s ease;
+        }
+        
+        .print-btn:hover {
+            background: #1c4a6e;
+        }
+        
+        @media (max-width: 768px) {
+            .recipe-title { font-size: 2em; }
+            .recipe-meta { gap: 15px; }
+            .recipe-content { padding: 20px; }
+            .ingredients-grid { grid-template-columns: 1fr; }
+        }
+        
+        @media print {
+            .print-btn { display: none; }
+            body { background: white; }
+            .recipe-card { box-shadow: none; border: 1px solid #ccc; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="recipe-card">
+            <div class="recipe-header">
+                <h1 class="recipe-title">Roasted Tomato, Onion, And Fennel Soup</h1>
+                
+                <div class="recipe-meta">
+                    <span class="meta-item">⏱️ Prep: 20 minutes</span>
+                    <span class="meta-item">🔥 Cook: 1 hour 15 minutes</span>
+                    <span class="meta-item">👥 Servings: 4</span>
+                    <span class="meta-item">⚡ Medium</span>
+                    <span class="meta-item">🍝 Italian</span>
+                </div>
+                
+                <div class="recipe-tags"><span class="tag">quick</span></div>
+            </div>
+            
+            <img src="https://italianfoodforever.com/wp-content/uploads/2010/08/roastedtomsoup132.jpg" alt="Roasted Tomato, Onion, And Fennel Soup" class="recipe-image" loading="lazy">
+            
+            <div class="recipe-content">
+                <div class="description">Roasting the vegetables for this soup brings out their natural sweetness.</div>
+                
+                <div class="section">
+                    <h2 class="section-title">📋 Ingredients</h2>
+                    <div class="ingredients-grid">
+                        <div class="ingredient-item">24 Medium Large Plum Tomatoes</div><div class="ingredient-item">1 Large Sweet Onion</div><div class="ingredient-item">1 Large Fresh Fennel Bulb</div><div class="ingredient-item">4 Cloves Garlic</div><div class="ingredient-item">3 Tablespoons Fresh Chopped Thyme</div><div class="ingredient-item">1/4 Cup Chopped Fresh Basil</div><div class="ingredient-item">Salt & Pepper</div><div class="ingredient-item">Extra Virgin Olive Oil</div><div class="ingredient-item">Chicken Broth</div>
+                    </div>
+                </div>
+                
+                <div class="section">
+                    <h2 class="section-title">👩‍🍳 Instructions</h2>
+                    <ol class="instructions-list">
+                        <li class="instruction-item">Preheat the oven to 350 degrees F.</li><li class="instruction-item">Prepare 2 large baking sheets by covering them with aluminum foil.</li><li class="instruction-item">Cut the tomatoes in half and lay them cut side up on one of the baking sheets.</li><li class="instruction-item">Finely chop the thyme with two of the garlic cloves and sprinkle this over the tomatoes.</li><li class="instruction-item">Drizzle the cut side of the tomatoes with a little olive oil and season with salt and pepper.</li><li class="instruction-item">Peel the onion and cut into one inch slices, brush both sides with a little olive oil and place on the other baking sheet.</li><li class="instruction-item">Cut the fennel in half and remove the core.</li><li class="instruction-item">Cut off the frond stems and then cut off the fennel leaves, toss them in a little olive oil and place them on the baking sheet with the onions.</li><li class="instruction-item">Season the onions and fennel with a little salt and pepper.</li><li class="instruction-item">Place both baking sheets in the oven and bake until the vegetables are softened and beginning to brown.</li><li class="instruction-item">The tomatoes will take about 40 minutes and the onions and fennel may take up to an hour.</li><li class="instruction-item">Place the vegetables into a food processor and pulse until you have a thick chunky mixture.</li><li class="instruction-item">Heat another two tablespoons of olive oil in a heavy saucepan and cook the other two garlic cloves, finely minced until fragrant.</li><li class="instruction-item">Add the tomato mixture, the chopped basil and just enough broth to loosen the soup. (I use about one cup of broth.)</li><li class="instruction-item">Bring the mixture to a boil and then reduce the heat to a simmer, season with salt and pepper and cook for an additional 10 minutes to meld the flavors, adding additional broth if the soup becomes too thick.</li><li class="instruction-item">Allow the soup to come to room temperature before serving.</li><li class="instruction-item">Serve the soup at room temperature in individual bowls topped with your garnish of choice.</li><li class="instruction-item">I mix two tablespoons of pesto with a tablespoon or two of olive oil and drizzle this mixture on top before serving.</li>
+                    </ol>
+                </div>
+                
+                <div class="notes">
+                    <h3>💡 Chef's Notes</h3>
+                    <p>Nutrition Information:Yield: 4 Serving Size: 2 cups<br>Amount Per Serving: Calories: 323Total Fat: 17gSaturated Fat: 3gTrans Fat: 0gUnsaturated Fat: 13gCholesterol: 6mgSodium: 462mgCarbohydrates: 40gFiber: 11gSugar: 25gProtein: 10g</p>
+                </div>
+                
+                <button class="print-btn" onclick="window.print()">🖨️ Print Recipe</button>
+            </div>
+            
+            <div class="footer">
+                <p>Recipe created by Victor Ye on September 22, 2025</p>
+                <p>Generated with ❤️ using Recipe Blog Generator</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
