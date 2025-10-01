@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lemon Ricotta Cake - Victor Ye Recipes</title>
+    <meta name="description" content="Lemon Ricotta Cake - A simple lemon flavored cake that includes ricotta cheese, keeping the cake ver moist.
+done...">
+    <meta name="keywords" content="Quick, recipe, cooking, Italian">
+    <meta name="author" content="Victor Ye">
+    <meta property="og:title" content="Lemon Ricotta Cake">
+    <meta property="og:description" content="Lemon Ricotta Cake - A simple lemon flavored cake that includes ricotta cheese, keeping the cake ver moist.
+done...">
+    <meta property="og:image" content="https://italianfoodforever.com/wp-content/uploads/2010/05/ricottalemoncake10.jpg">
+    
+    <style>
+        :root {
+            --primary-color: #2a5c82;
+            --secondary-color: #666666;
+            --accent-color: #f0f7ff;
+            --bg-color: #f9f9f9;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.7;
+            color: #333;
+            background: linear-gradient(135deg, var(--bg-color) 0%, #ffffff 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .recipe-card {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            overflow: hidden;
+            margin: 20px 0;
+        }
+        
+        .recipe-header {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #3a7cb4 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+        
+        .recipe-title {
+            font-size: 2.5em;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+        
+        .recipe-meta {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+        
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 1.1em;
+        }
+        
+        .recipe-tags {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-top: 15px;
+        }
+        
+        .tag {
+            background: rgba(255,255,255,0.2);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+        }
+        
+        .recipe-image {
+            width: 100%;
+            max-height: 500px;
+            object-fit: cover;
+            border-bottom: 3px solid var(--primary-color);
+        }
+        
+        .recipe-content {
+            padding: 40px;
+        }
+        
+        .description {
+            font-style: italic;
+            color: var(--secondary-color);
+            font-size: 1.1em;
+            margin-bottom: 30px;
+            line-height: 1.8;
+            background: var(--accent-color);
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 4px solid var(--primary-color);
+        }
+        
+        .section {
+            margin-bottom: 40px;
+        }
+        
+        .section-title {
+            color: var(--primary-color);
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--accent-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .ingredients-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .ingredient-item {
+            background: var(--accent-color);
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 3px solid var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .ingredient-item:before {
+            content: "•";
+            color: var(--primary-color);
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+        
+        .instructions-list {
+            list-style: none;
+            counter-reset: instruction-counter;
+        }
+        
+        .instruction-item {
+            margin-bottom: 25px;
+            padding: 20px;
+            background: var(--accent-color);
+            border-radius: 10px;
+            border-left: 4px solid var(--primary-color);
+            position: relative;
+        }
+        
+        .instruction-item:before {
+            content: counter(instruction-counter);
+            counter-increment: instruction-counter;
+            background: var(--primary-color);
+            color: white;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            position: absolute;
+            left: -17px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        
+        .notes {
+            background: linear-gradient(135deg, var(--accent-color) 0%, #e3f2fd 100%);
+            padding: 25px;
+            border-radius: 10px;
+            border-left: 4px solid var(--primary-color);
+            margin-top: 30px;
+        }
+        
+        .notes h3 {
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding: 20px;
+            color: var(--secondary-color);
+            border-top: 1px solid #eee;
+        }
+        
+        .print-btn {
+            background: var(--primary-color);
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 1em;
+            margin: 20px 0;
+            transition: background 0.3s ease;
+        }
+        
+        .print-btn:hover {
+            background: #1c4a6e;
+        }
+        
+        @media (max-width: 768px) {
+            .recipe-title { font-size: 2em; }
+            .recipe-meta { gap: 15px; }
+            .recipe-content { padding: 20px; }
+            .ingredients-grid { grid-template-columns: 1fr; }
+        }
+        
+        @media print {
+            .print-btn { display: none; }
+            body { background: white; }
+            .recipe-card { box-shadow: none; border: 1px solid #ccc; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="recipe-card">
+            <div class="recipe-header">
+                <h1 class="recipe-title">Lemon Ricotta Cake</h1>
+                
+                <div class="recipe-meta">
+                    <span class="meta-item">⏱️ Prep: 15 minutes</span>
+                    <span class="meta-item">🔥 Cook: 45 minutes</span>
+                    <span class="meta-item">👥 Servings: 6 - 8</span>
+                    <span class="meta-item">⚡ Medium</span>
+                    <span class="meta-item">🍝 Italian</span>
+                </div>
+                
+                <div class="recipe-tags"><span class="tag">Quick</span></div>
+            </div>
+            
+            <img src="https://italianfoodforever.com/wp-content/uploads/2010/05/ricottalemoncake10.jpg" alt="Lemon Ricotta Cake" class="recipe-image" loading="lazy">
+            
+            <div class="recipe-content">
+                <div class="description">A simple lemon flavored cake that includes ricotta cheese, keeping the cake ver moist.
+done</div>
+                
+                <div class="section">
+                    <h2 class="section-title">📋 Ingredients</h2>
+                    <div class="ingredients-grid">
+                        <div class="ingredient-item">3/4 Cup Softened Butter</div><div class="ingredient-item">3/4 Cup Granulated Sugar</div><div class="ingredient-item">Zest From 3 Large Lemons</div><div class="ingredient-item">1 Teaspoon Lemon Extract</div><div class="ingredient-item">3 Large Eggs, Separated</div><div class="ingredient-item">1 Cup Full Fat Ricotta Cheese</div><div class="ingredient-item">1/2 Cup Plus 2 Tablespoons All-purpose Flour</div><div class="ingredient-item">2 Teaspoons Baking Powder</div><div class="ingredient-item">Dash of Salt</div><div class="ingredient-item">To Serve:</div><div class="ingredient-item">Fresh Strawberries</div>
+                    </div>
+                </div>
+                
+                <div class="section">
+                    <h2 class="section-title">👩‍🍳 Instructions</h2>
+                    <ol class="instructions-list">
+                        <li class="instruction-item">Preheat oven to 325 degrees F.</li><li class="instruction-item">Lightly grease and flour a 7 or 8 inch spring-form pan.</li><li class="instruction-item">Beat the butter and sugar with a hand mixer until light and fluffy.</li><li class="instruction-item">Add the lemon zest, extract, egg yolks and ricotta cheese and beat until smooth.</li><li class="instruction-item">Mix together the flour, baking powder and salt, and beat into the butter mixture just until combined.</li><li class="instruction-item">Wash your beaters well, and then beat the egg whites in a separate bowl until stiff.</li><li class="instruction-item">Gently fold the egg whites into the batter then spoon the batter into your prepared tin.</li><li class="instruction-item">Bake for about 45 minutes, or until a cake tester stuck into the center comes out clean.</li><li class="instruction-item">Allow to cool to room temperature before serving.</li>
+                    </ol>
+                </div>
+                
+                <div class="notes">
+                    <h3>💡 Chef's Notes</h3>
+                    <p>The ricotta keeps the crumb tender and moist, while a hint of lemon adds brightness without overwhelming</p>
+                </div>
+                
+                <button class="print-btn" onclick="window.print()">🖨️ Print Recipe</button>
+            </div>
+            
+            <div class="footer">
+                <p>Recipe created by Victor Ye on October 01, 2025</p>
+                <p>Generated with ❤️ using Recipe Blog Generator</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
